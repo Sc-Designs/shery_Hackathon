@@ -1,0 +1,8 @@
+.onlyBorder{
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+}
+img{
+    transition: opacity 0.2s ease-in-out;
+}
