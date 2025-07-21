@@ -20,11 +20,10 @@ const CardSection = () => {
         ))}
       </div>
       <div className="flex justify-center my-20">
-
         <GlareButton>
-        <Link className='px-20 py-2 font-Satoshi'>
-         Shop Now
-        </Link>
+          <Link to="/product/luxury" className="px-20 py-2 font-Satoshi">
+            Shop Now
+          </Link>
         </GlareButton>
       </div>
     </section>

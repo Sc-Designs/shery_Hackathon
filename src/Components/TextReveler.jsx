@@ -23,12 +23,14 @@ const TextReveler = () => {
         }
     },[animation])
   return (
-    <div className="text-white absolute flex z-50 md:w-full font-GTSuper top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        {animation && (
-      <h1 ref={textRef} className="onlyBorder text-6xl lg:text-8xl text-center leading-20 lg:leading-32 italic px-20">
-        "Fragrance", "Skin", "Face", "Hair", "Wellness"
-      </h1>
-    )}
+    <div className="text-white absolute flex z-50 md:w-full font-GTSuper  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      {animation && (
+        <h1
+          ref={textRef}
+          className="onlyBorder text-6xl lg:text-8xl text-center -mt-50 md:-mt-10 leading-20 lg:leading-32 italic px-20">
+          "Fragrance", "Skin", "Face", "Hair", "Wellness"
+        </h1>
+      )}
     </div>
   );
 }

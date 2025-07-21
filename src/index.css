@@ -6,7 +6,7 @@
 }
 @font-face {
     font-family: "GTSuper";
-    src: url(assets/GT-Super-Text-Medium-Trial.otf)
+    src: url(assets/Gloock-Regular.ttf)
 }
 @font-face {
     font-family: "Satoshi";
@@ -19,4 +19,5 @@
 }
 ::-webkit-scrollbar{
     display: none;
+    /* background-color: #c3f3fa; */
 }

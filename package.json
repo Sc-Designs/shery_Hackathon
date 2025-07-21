@@ -1,5 +1,5 @@
 {
-  "name": "hackathon",
+  "name": "frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,6 +16,7 @@
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.11",
     "lenis": "^1.3.8",
+    "motion": "^12.23.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",

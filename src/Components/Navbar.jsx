@@ -1,5 +1,5 @@
 import React, {  useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { CiSearch } from "react-icons/ci";
 import { MdPersonPin } from "react-icons/md";
 import { LiaCartArrowDownSolid } from "react-icons/lia";
@@ -15,33 +15,83 @@ import { FaInstagram } from "react-icons/fa";
 
 const Navbar = () => {
     const [menuShow, setMenuShow] = useState(false);
+    const navigate = useNavigate();
   return (
     <>
-      <div className="hidden fixed z-50 lg:flex items-center justify-between text-amber-400 w-[90%] py-2 px-4 rounded-md bg-zinc-900/40 backdrop-blur-3xl border-1 border-amber-400 top-5 left-1/2 -translate-x-1/2">
-        <img src="/onlyLogo.png" className="h-10 object-cover" alt="" />
+      <div className="hidden fixed z-[999] lg:flex items-center justify-between text-zinc-200 w-[90%] py-2 px-10 rounded-full bg-zinc-700/50 backdrop-blur-2xl border-1 border-zinc-300 top-5 left-1/2 -translate-x-1/2">
+        <img
+          onClick={() => {
+            navigate("/");
+          }}
+          src="/onlyLogo.png"
+          className="h-10 object-cover cursor-pointer"
+          alt=""
+        />
         <div className="flex gap-x-10">
           <ul className="flex gap-x-4">
-            <Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-amber-400 hover:text-amber-400 transition-all duration-150"
+                  : "hover:text-amber-400 transition-all duration-150"
+              }
+              to="/product/luxury">
               <li>OG Luxury</li>
-            </Link>
-            <Link>
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-amber-400 hover:text-amber-400 transition-all duration-150"
+                  : "hover:text-amber-400 transition-all duration-150"
+              }
+              to="/product/natural">
               <li>OG Natural</li>
-            </Link>
-            <Link>
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-amber-400 hover:text-amber-400 transition-all duration-150"
+                  : "hover:text-amber-400 transition-all duration-150"
+              }
+              to="/product/science">
               <li>OG Science</li>
-            </Link>
-            <Link>
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-amber-400 hover:text-amber-400 transition-all duration-150"
+                  : "hover:text-amber-400 transition-all duration-150"
+              }
+              to="/product/beauty">
               <li>OG Beauty</li>
-            </Link>
-            <Link>
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-amber-400 hover:text-amber-400 transition-all duration-150"
+                  : "hover:text-amber-400 transition-all duration-150"
+              }
+              to="/product/ayurveda">
               <li>OG Ayurveda</li>
-            </Link>
-            <Link>
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-amber-400 hover:text-amber-400 transition-all duration-150"
+                  : "hover:text-amber-400 transition-all duration-150"
+              }
+              to="/product/wellness">
               <li>OG Wellness</li>
-            </Link>
-            <Link>
-              <li>Build Your Own Box</li>
-            </Link>
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-amber-400 hover:text-amber-400 transition-all duration-150"
+                  : "hover:text-amber-400 transition-all duration-150"
+              }
+              to="/product/deals">
+              <li>Crazy Deals</li>
+            </NavLink>
           </ul>
 
           <ul className="flex gap-x-4 items-center text-2xl">
@@ -50,7 +100,7 @@ const Navbar = () => {
                 <CiSearch />
               </li>
             </Link>
-            <Link>
+            <Link to="/login">
               <li>
                 <MdPersonPin />
               </li>
@@ -63,14 +113,19 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <div className="flex fixed z-[99] items-center justify-between text-amber-400 w-[90%] py-2 px-4 rounded-md bg-zinc-900/80 backdrop-blur-3xl border-1 border-amber-400 top-5 left-1/2 -translate-x-1/2 md:hidden">
+      <div className="flex fixed z-[99] items-center justify-between text-zinc-200 w-[90%] py-2 px-4 rounded-full bg-zinc-700/50 backdrop-blur-xl border-1 border-zinc-300 top-5 left-1/2 -translate-x-1/2 md:hidden">
         <HiOutlineMenuAlt4
           onClick={() => setMenuShow(true)}
           className="text-2xl"
         />
-        <img src="/onlyLogo.png" className="h-7 object-cover" alt="" />
+        <img
+          onClick={() => navigate("/")}
+          src="/onlyLogo.png"
+          className="h-7 object-cover"
+          alt=""
+        />
         <ul className="flex gap-x-2 text-2xl">
-          <Link>
+          <Link to="/login">
             <li>
               <MdPersonPin />
             </li>
@@ -91,34 +146,54 @@ const Navbar = () => {
           className="absolute top-2 right-2 text-4xl"
         />
         <div className=" w-full h-fit">
-          <h1 className="flex items-center font-Satoshi font-semibold">
+          <h1
+            onClick={() => navigate("/login")}
+            className="flex items-center font-Satoshi font-semibold">
             Login
           </h1>
           <h1 className="mt-5 mb-2 flex items-center font-GTSuper">
             Shop By Brand
           </h1>
           <ul className="flex flex-col gap-y-5 mb-4 text-amber-400 font-Satoshi">
-            <Link className="flex items-center bg-[#240c0c] p-2 justify-between rounded">
+            <Link
+              to="/product/luxury"
+              onClick={() => setMenuShow(false)}
+              className="flex items-center bg-[#240c0c] p-2 justify-between rounded">
               <li>Luxury</li>
               <MdArrowOutward />
             </Link>
-            <Link className="flex items-center bg-[#240c0c] p-2 justify-between rounded">
+            <Link
+              onClick={() => setMenuShow(false)}
+              to="/product/beauty"
+              className="flex items-center bg-[#240c0c] p-2 justify-between rounded">
               <li>Beauty</li>
               <MdArrowOutward />
             </Link>
-            <Link className="flex items-center bg-[#240c0c] p-2 justify-between rounded">
+            <Link
+              onClick={() => setMenuShow(false)}
+              to="/product/science"
+              className="flex items-center bg-[#240c0c] p-2 justify-between rounded">
               <li>Science</li>
               <MdArrowOutward />
             </Link>
-            <Link className="flex items-center bg-[#240c0c] p-2 justify-between rounded">
+            <Link
+              onClick={() => setMenuShow(false)}
+              to="/product/natural"
+              className="flex items-center bg-[#240c0c] p-2 justify-between rounded">
               <li>Natural</li>
               <MdArrowOutward />
             </Link>
-            <Link className="flex items-center bg-[#240c0c] p-2 justify-between rounded">
+            <Link
+              to="/product/ayurveda"
+              onClick={() => setMenuShow(false)}
+              className="flex items-center bg-[#240c0c] p-2 justify-between rounded">
               <li>Ayurveda</li>
               <MdArrowOutward />
             </Link>
-            <Link className="flex items-center bg-[#240c0c] p-2 justify-between rounded">
+            <Link
+              onClick={() => setMenuShow(false)}
+              to="/product/wellness"
+              className="flex items-center bg-[#240c0c] p-2 justify-between rounded">
               <li>Wellness</li>
               <MdArrowOutward />
             </Link>
