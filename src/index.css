@@ -12,12 +12,17 @@
     font-family: "Satoshi";
     src: url(assets/66aa728085dec3390cb7f058_Satoshi-Variable.ttf)
 }
+@font-face {
+    font-family: "Blac";
+    src: url(assets/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf)
+}
 @theme{
     --font-Placard : "Placard";
     --font-GTSuper : "GTSuper";
     --font-Satoshi : "Satoshi";
+    --font-Blac : "Blac"
 }
 ::-webkit-scrollbar{
     display: none;
-    /* background-color: #c3f3fa; */
+    /* background: #fb7575; */
 }

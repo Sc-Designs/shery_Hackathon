@@ -125,7 +125,7 @@ export const ScrollVelocity = ({
   }
 
   return (
-    <section className="-mt-10 md:-mt-35">
+    <section className="mt-0 md:mt-5">
       {texts.map((text, index) => (
         <VelocityText
           key={index}

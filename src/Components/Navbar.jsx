@@ -24,7 +24,7 @@ const Navbar = () => {
             navigate("/");
           }}
           src="/onlyLogo.png"
-          className="h-10 object-cover cursor-pointer"
+          className="object-cover h-10 cursor-pointer"
           alt=""
         />
         <div className="flex gap-x-10">
@@ -94,17 +94,23 @@ const Navbar = () => {
             </NavLink>
           </ul>
 
-          <ul className="flex gap-x-4 items-center text-2xl">
+          <ul className="flex items-center text-2xl gap-x-4">
             <Link>
               <li>
                 <CiSearch />
               </li>
             </Link>
-            <Link to="/login">
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-amber-400 hover:text-amber-400 transition-all duration-150"
+                  : "hover:text-amber-400 transition-all duration-150"
+              }
+              to="/profile">
               <li>
                 <MdPersonPin />
               </li>
-            </Link>
+            </NavLink>
             <Link>
               <li>
                 <LiaCartArrowDownSolid />
@@ -121,11 +127,11 @@ const Navbar = () => {
         <img
           onClick={() => navigate("/")}
           src="/onlyLogo.png"
-          className="h-7 object-cover"
+          className="object-cover h-7"
           alt=""
         />
-        <ul className="flex gap-x-2 text-2xl">
-          <Link to="/login">
+        <ul className="flex text-2xl gap-x-2">
+          <Link to="/profile">
             <li>
               <MdPersonPin />
             </li>
@@ -143,18 +149,13 @@ const Navbar = () => {
         }`}>
         <AiFillCloseSquare
           onClick={() => setMenuShow(false)}
-          className="absolute top-2 right-2 text-4xl"
+          className="absolute text-4xl top-2 right-2 text-[#240c0c]"
         />
-        <div className=" w-full h-fit">
-          <h1
-            onClick={() => navigate("/login")}
-            className="flex items-center font-Satoshi font-semibold">
-            Login
-          </h1>
-          <h1 className="mt-5 mb-2 flex items-center font-GTSuper">
+        <div className="w-full h-fit">
+          <h1 className="flex text-[#240c0c] items-center mt-5 mb-4 font-GTSuper">
             Shop By Brand
           </h1>
-          <ul className="flex flex-col gap-y-5 mb-4 text-amber-400 font-Satoshi">
+          <ul className="flex flex-col mb-4 gap-y-5 text-amber-400 font-Satoshi">
             <Link
               to="/product/luxury"
               onClick={() => setMenuShow(false)}
@@ -199,30 +200,36 @@ const Navbar = () => {
             </Link>
           </ul>
           <hr />
-          <div className="my-4 flex justify-between">
+          <div className="flex justify-between my-4">
             <div className="flex flex-col items-center">
-              <div className="border-2 p-2 rounded-full w-fit">
-                <FaGripfire className="text-4xl" />
+              <div className="p-2 border-2 rounded-full border-[#240c0c] w-fit">
+                <FaGripfire className="text-4xl text-[#240c0c]" />
               </div>
-              <h1 className="text-sm mt-1 font-Satoshi">Bundel Offers</h1>
+              <h1 className="mt-1 text-sm font-Satoshi text-[#240c0c]">
+                Bundel Offers
+              </h1>
             </div>
             <div className="flex flex-col items-center">
-              <div className="border-2 p-2 rounded-full w-fit">
-                <BiSolidOffer className="text-4xl" />
+              <div className="p-2 border-2 rounded-full border-[#240c0c] w-fit">
+                <BiSolidOffer className="text-4xl text-[#240c0c]" />
               </div>
-              <h1 className="text-sm mt-1 font-Satoshi">New Offers</h1>
+              <h1 className="mt-1 text-sm font-Satoshi text-[#240c0c]">
+                New Offers
+              </h1>
             </div>
             <div className="flex flex-col items-center">
-              <div className="border-2 p-2 rounded-full w-fit">
-                <RiVerifiedBadgeFill className="text-4xl" />
+              <div className="p-2 border-2 rounded-full border-[#240c0c] w-fit">
+                <RiVerifiedBadgeFill className="text-4xl text-[#240c0c]" />
               </div>
-              <h1 className="text-sm mt-1 font-Satoshi">Bestsellers</h1>
+              <h1 className="mt-1 text-sm font-Satoshi text-[#240c0c]">
+                Bestsellers
+              </h1>
             </div>
           </div>
-          <h1 className="flex  items-center gap-x-2 text-xl font-Satoshi">
-            <IoCallOutline className="mt-1" /> Contact Us
+          <h1 className="flex items-center text-xl gap-x-2 font-Satoshi text-[#240c0c]">
+            <IoCallOutline className="mt-1 text-[#240c0c]" /> Contact Us
           </h1>
-          <div className="mt-2 text-lg font-Satoshi flex items-center gap-x-3">
+          <div className="flex items-center mt-2 text-lg font-Satoshi gap-x-3 text-[#240c0c]">
             <h1>Follow us :</h1>
             <CiFacebook className="mt-1 text-xl" />
             <FaInstagram className="mt-1 text-xl" />

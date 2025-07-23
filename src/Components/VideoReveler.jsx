@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaPlay } from "react-icons/fa6";
+import Magnet from "./Magnet";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,36 +43,41 @@ const VideoReveler = () => {
   return (
     <section
       ref={boxReveler}
-      className="w-full h-screen flex text-white relative">
+      className="relative flex w-full h-screen text-white overflow-hidden">
+      <img
+        src="/collection.jpg"
+        className={`absolute w-full h-full object-cover transition-opacity duration-200 ${PlayPause ? "opacity-0" : "opacity-100"}`}
+        alt=""
+      />
       <video
         ref={videoRef}
-        loop
-        src="/0001-0120.mp4"
+        src="/Og_Add.mp4"
         onClick={() => {
           if (videoRef.current) {
             videoRef.current.pause();
             setPlayPause(false);
           }
         }}
-        className="w-full h-full object-cover object-bottom"></video>
+        onEnded={() => setPlayPause(false)}
+        className="object-cover object-bottom w-full h-full"></video>
       {!PlayPause && (
-        <div className="bg-red-600 group absolute p-10 top-1/2 left-1/2 cursor-pointer -translate-x-1/2 -translate-y-1/2 text-5xl rounded-full hover:bg-red-700 transition-all duration-200">
+        <div className="absolute p-10 text-5xl transition-all duration-200 -translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full cursor-pointer group top-1/2 left-1/2 hover:bg-red-700">
           <FaPlay
-            className="group-hover:scale-90 transition-all duration-200"
+            className="transition-all duration-200 group-hover:scale-90"
             onClick={() => {
               if (videoRef.current) {
                 videoRef.current.play();
                 setPlayPause(true);
               }
             }}
-          />
+            />
         </div>
       )}
-      <div className="leftSide w-1/2 h-full flex items-center uppercase justify-end pr-[0.5px] absolute bg-black left-0 top-0">
-        <h1 className="tracking-widest font-GTSuper text-[14vw]">Perf</h1>
+      <div className="leftSide w-1/2 h-full flex items-center justify-end z-20 pr-[0.5px] absolute bg-black left-0 top-0">
+        <h1 className="tracking-widest font-Blac text-[14vw]">Perf</h1>
       </div>
-      <div className="rightSide w-1/2 h-full flex items-center uppercase justify-start pl-[0.5px] absolute bg-black left-1/2 top-0">
-        <h1 className="tracking-widest font-GTSuper text-[14vw]">umes</h1>
+      <div className="rightSide w-1/2 h-full flex items-center justify-start z-20 pl-[0.5px] absolute bg-black left-1/2 top-0">
+        <h1 className="tracking-widest font-Blac text-[14vw]">umes</h1>
       </div>
     </section>
   );

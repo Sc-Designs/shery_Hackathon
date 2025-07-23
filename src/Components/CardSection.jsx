@@ -9,14 +9,15 @@ import GlareButton from './GlareButton';
 gsap.registerPlugin(ScrollTrigger);
 const CardSection = () => {
     const Cards = useSelector((state) => state.preCardInfoReducer);
+    const pixelColor = ["#FB2C36", "#00B8DB", "#737373","#F54900"];
   return (
-    <section className="w-full min-h-screen text-white px-10">
-      <h1 className="font-Satoshi font-semibold mb-10 text-center text-4xl">
+    <section className="w-full min-h-screen px-10 text-white">
+      <h1 className="mb-10 text-4xl font-semibold text-center font-Satoshi">
         Our Best Perfumes in 2025
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 justify-items-center items-center gap-5">
+      <div className="grid items-center grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 justify-items-center">
         {Cards.map((elem, i) => (
-          <Card data={elem} key={i} />
+          <Card data={elem} key={i} colorOfPixel={pixelColor[i]} />
         ))}
       </div>
       <div className="flex justify-center my-20">

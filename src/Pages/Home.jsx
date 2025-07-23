@@ -12,32 +12,36 @@ import "../Components/Marquee.css"
 import GlareButton from '../Components/GlareButton';
 import { CgFramer } from "react-icons/cg";
 import Navbar from '../Components/Navbar';
+import DotGrid from '../Components/DotGrid';
+import FlowingMenu from '../Components/FlowingMenu';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
-
+  const Cards = useSelector((state) => state.preCardInfoReducer);
   return (
-    <div className="bg-black w-full min-h-screen text-white overflow-x-hidden">
-      <section className="w-full h-screen relative">
+    <div className="w-full min-h-screen overflow-x-hidden text-white bg-black">
+      <section className="relative w-full h-screen">
         <Navbar />
-        <Beams
-          beamWidth={2}
-          beamHeight={15}
-          beamNumber={12}
-          lightColor="#ffffff"
-          speed={2}
-          noiseIntensity={1.75}
-          scale={0.2}
-          rotation={10}
+        <DotGrid
+          dotSize={5}
+          gap={15}
+          baseColor="#171717"
+          activeColor="#F0B100"
+          proximity={120}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
         />
         <TextReveler />
-        <div className="absolute w-full py-2 text-white bottom-30 flex flex-col gap-y-10 md:gap-y-5 items-center md:bottom-20">
-          <h1 className="font-Satoshi text-4xl italic md:text-3xl uppercase font-bold">
+        <div className="absolute flex flex-col items-center w-full py-2 text-white bottom-30 gap-y-10 md:gap-y-5 md:bottom-20">
+          <h1 className="text-4xl italic font-bold uppercase font-Satoshi md:text-3xl">
             In Your Hand
           </h1>
           <GlareButton>
             <Link
               to="/product/luxury"
-              className="px-28 py-2 font-Satoshi text-xl flex items-center gap-x-2">
+              className="flex items-center py-2 text-xl px-28 font-Satoshi gap-x-2">
               Grab It <CgFramer className="mt-1" />
             </Link>
           </GlareButton>
@@ -49,7 +53,9 @@ const Home = () => {
       </section>
       <VideoReveler />
       <TextRevel />
-      <CardSection />
+      <div className="relative h-96">
+        <FlowingMenu items={Cards} />
+      </div>
       <ScrollVelocity
         texts={["Fragrance", "OG Beuty"]}
         velocity={100}

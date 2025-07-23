@@ -3,7 +3,7 @@ import React from 'react'
 import PixelTransition from './PixelTransition';
 
 
-const Card = ({data}) => {
+const Card = ({ data, colorOfPixel }) => {
   return (
     <PixelTransition
       firstContent={
@@ -14,19 +14,19 @@ const Card = ({data}) => {
         />
       }
       secondContent={
-        <div className="flex flex-col bg-zinc-950 w-full h-full gap-y-5 justify-center items-center py-10 px-4">
-          <h1 className="text-3xl font-GTSuper uppercase">{data.name}</h1>
-          <p className="font-Satoshi text-zinc-600 text-center text-2xl">
+        <div className="flex flex-col items-center justify-center w-full h-full px-4 py-10 bg-zinc-950 gap-y-5">
+          <h1 className="text-3xl uppercase font-GTSuper">{data.name}</h1>
+          <p className="text-2xl text-center font-Satoshi text-zinc-600">
             {data.description}
           </p>
         </div>
       }
       gridSize={12}
-      pixelColor="#c3f3fa"
+      pixelColor={colorOfPixel}
       animationStepDuration={0.6}
       className="custom-pixel-card"
     />
   );
-}
+};
 
 export default Card
