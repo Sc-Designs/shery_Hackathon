@@ -7,7 +7,8 @@ const initialState = [
     description: "Rosemary, Basil & Amber | India’s Strongest Perfume",
     price: 599,
     category: "luxury",
-    id: 1,
+    id: 0,
+    count: 1,
   },
   {
     name: "Shadow",
@@ -15,7 +16,8 @@ const initialState = [
     description: "Lavender, Sage & Amber | India’s Strongest Perfume",
     price: 599,
     category: "luxury",
-    id: 2,
+    id: 1,
+    count: 1,
   },
   {
     name: "Gallant",
@@ -23,7 +25,8 @@ const initialState = [
     description: "Petitgrain, Jasmine & Sandalwood | India’s Strongest Perfume",
     price: 599,
     category: "luxury",
-    id: 3,
+    id: 2,
+    count: 1,
   },
   {
     name: "Smokey",
@@ -31,7 +34,8 @@ const initialState = [
     description: "Whiskey, Oud & Cinnamon | India’s Strongest Perfume",
     price: 599,
     category: "luxury",
-    id: 4,
+    id: 3,
+    count: 1,
   },
   {
     name: "Glow Elixir",
@@ -40,6 +44,7 @@ const initialState = [
     price: 499,
     category: "natural",
     id: 4,
+    count: 1,
   },
   {
     name: "Pure Dew Face Mist",
@@ -48,6 +53,7 @@ const initialState = [
     price: 349,
     category: "natural",
     id: 5,
+    count: 1,
   },
   {
     name: "Neem Detox Gel",
@@ -56,6 +62,7 @@ const initialState = [
     price: 399,
     category: "natural",
     id: 6,
+    count: 1,
   },
   {
     name: "Cocoa Butter Balm",
@@ -64,6 +71,7 @@ const initialState = [
     price: 299,
     category: "natural",
     id: 7,
+    count: 1,
   },
   {
     name: "Sun Kissed SPF 50",
@@ -72,6 +80,7 @@ const initialState = [
     price: 549,
     category: "natural",
     id: 8,
+    count: 1,
   },
   {
     name: "Green Tea Serum",
@@ -80,6 +89,7 @@ const initialState = [
     price: 449,
     category: "natural",
     id: 9,
+    count: 1,
   },
   {
     name: "Honey Oat Scrub",
@@ -88,6 +98,7 @@ const initialState = [
     price: 379,
     category: "natural",
     id: 10,
+    count: 1,
   },
   {
     name: "Charcoal Clay Mask",
@@ -96,6 +107,7 @@ const initialState = [
     price: 429,
     category: "natural",
     id: 11,
+    count: 1,
   },
   {
     name: "Lavender Sleep Cream",
@@ -104,6 +116,7 @@ const initialState = [
     price: 499,
     category: "natural",
     id: 12,
+    count: 1,
   },
   {
     name: "Papaya Brightening Gel",
@@ -112,6 +125,7 @@ const initialState = [
     price: 389,
     category: "natural",
     id: 13,
+    count: 1,
   },
   {
     name: "Peptide Repair Serum",
@@ -121,6 +135,7 @@ const initialState = [
     price: 799,
     category: "science",
     id: 14,
+    count: 1,
   },
   {
     name: "Retinol Night Cream",
@@ -130,6 +145,7 @@ const initialState = [
     price: 899,
     category: "science",
     id: 15,
+    count: 1,
   },
   {
     name: "AHA Glow Toner",
@@ -139,6 +155,7 @@ const initialState = [
     price: 599,
     category: "science",
     id: 16,
+    count: 1,
   },
   {
     name: "Vitamin C Shield",
@@ -148,6 +165,7 @@ const initialState = [
     price: 849,
     category: "science",
     id: 17,
+    count: 1,
   },
   {
     name: "Hyaluronic Hydration Boost",
@@ -157,6 +175,7 @@ const initialState = [
     price: 499,
     category: "science",
     id: 18,
+    count: 1,
   },
   {
     name: "Salicylic Blemish Fix",
@@ -166,6 +185,7 @@ const initialState = [
     price: 549,
     category: "science",
     id: 19,
+    count: 1,
   },
   {
     name: "Barrier Restore Moisturizer",
@@ -175,6 +195,7 @@ const initialState = [
     price: 629,
     category: "science",
     id: 20,
+    count: 1,
   },
   {
     name: "Azelaic Clarity Cream",
@@ -184,6 +205,7 @@ const initialState = [
     price: 699,
     category: "science",
     id: 21,
+    count: 1,
   },
   {
     name: "Cica Repair Gel",
@@ -193,6 +215,7 @@ const initialState = [
     price: 499,
     category: "science",
     id: 22,
+    count: 1,
   },
   {
     name: "SPF 60 UV Defense Fluid",
@@ -202,6 +225,7 @@ const initialState = [
     price: 749,
     category: "science",
     id: 23,
+    count: 1,
   },
   {
     name: "Radiance Boost Cream",
@@ -210,6 +234,7 @@ const initialState = [
     price: 649,
     category: "beauty",
     id: 24,
+    count: 1,
   },
   {
     name: "Glass Skin Serum",
@@ -219,6 +244,7 @@ const initialState = [
     price: 799,
     category: "beauty",
     id: 25,
+    count: 1,
   },
   {
     name: "24K Gold Face Gel",
@@ -227,6 +253,7 @@ const initialState = [
     price: 999,
     category: "beauty",
     id: 26,
+    count: 1,
   },
   {
     name: "Blush Berry Lip Balm",
@@ -235,6 +262,7 @@ const initialState = [
     price: 299,
     category: "beauty",
     id: 27,
+    count: 1,
   },
   {
     name: "Rosy Cheek Mask",
@@ -243,6 +271,7 @@ const initialState = [
     price: 499,
     category: "beauty",
     id: 28,
+    count: 1,
   },
   {
     name: "Glow Getter Sheet Mask",
@@ -251,6 +280,7 @@ const initialState = [
     price: 199,
     category: "beauty",
     id: 29,
+    count: 1,
   },
   {
     name: "Silk Touch Primer",
@@ -260,6 +290,7 @@ const initialState = [
     price: 579,
     category: "beauty",
     id: 30,
+    count: 1,
   },
   {
     name: "Under Eye Bright Cream",
@@ -269,6 +300,7 @@ const initialState = [
     price: 429,
     category: "beauty",
     id: 31,
+    count: 1,
   },
   {
     name: "Glow Milk Cleanser",
@@ -277,6 +309,7 @@ const initialState = [
     price: 389,
     category: "beauty",
     id: 32,
+    count: 1,
   },
   {
     name: "Peach Polish Scrub",
@@ -286,6 +319,7 @@ const initialState = [
     price: 399,
     category: "beauty",
     id: 33,
+    count: 1,
   },
   {
     name: "Kumkumadi Tailam",
@@ -295,6 +329,7 @@ const initialState = [
     price: 799,
     category: "ayurveda",
     id: 34,
+    count: 1,
   },
   {
     name: "Neem Tulsi Face Wash",
@@ -303,6 +338,7 @@ const initialState = [
     price: 349,
     category: "ayurveda",
     id: 35,
+    count: 1,
   },
   {
     name: "Chandan Ubtan",
@@ -312,6 +348,7 @@ const initialState = [
     price: 399,
     category: "ayurveda",
     id: 36,
+    count: 1,
   },
   {
     name: "Ayur Glow Cream",
@@ -320,6 +357,7 @@ const initialState = [
     price: 479,
     category: "ayurveda",
     id: 37,
+    count: 1,
   },
   {
     name: "Ashwagandha Night Balm",
@@ -328,6 +366,7 @@ const initialState = [
     price: 549,
     category: "ayurveda",
     id: 38,
+    count: 1,
   },
   {
     name: "Methi Under Eye Serum",
@@ -337,6 +376,7 @@ const initialState = [
     price: 299,
     category: "ayurveda",
     id: 39,
+    count: 1,
   },
   {
     name: "Bhringraj Face Mist",
@@ -345,6 +385,7 @@ const initialState = [
     price: 319,
     category: "ayurveda",
     id: 40,
+    count: 1,
   },
   {
     name: "Haldi Chandan Sunscreen SPF 30",
@@ -353,6 +394,7 @@ const initialState = [
     price: 459,
     category: "ayurveda",
     id: 41,
+    count: 1,
   },
   {
     name: "Triphala Skin Detox Mask",
@@ -361,6 +403,7 @@ const initialState = [
     price: 429,
     category: "ayurveda",
     id: 42,
+    count: 1,
   },
   {
     name: "Desi Rose Toner",
@@ -369,6 +412,7 @@ const initialState = [
     price: 259,
     category: "ayurveda",
     id: 43,
+    count: 1,
   },
   {
     name: "Ashwagandha Capsules",
@@ -377,6 +421,7 @@ const initialState = [
     price: 499,
     category: "wellness",
     id: 44,
+    count: 1,
   },
   {
     name: "Giloy Tulsi Juice",
@@ -385,6 +430,7 @@ const initialState = [
     price: 349,
     category: "wellness",
     id: 45,
+    count: 1,
   },
   {
     name: "Triphala Tablets",
@@ -393,6 +439,7 @@ const initialState = [
     price: 299,
     category: "wellness",
     id: 46,
+    count: 1,
   },
   {
     name: "Apple Cider Vinegar",
@@ -402,6 +449,7 @@ const initialState = [
     price: 399,
     category: "wellness",
     id: 47,
+    count: 1,
   },
   {
     name: "Immuno+ Kadha Mix",
@@ -411,6 +459,7 @@ const initialState = [
     price: 259,
     category: "wellness",
     id: 48,
+    count: 1,
   },
   {
     name: "Shilajit Resin Pure",
@@ -419,6 +468,7 @@ const initialState = [
     price: 799,
     category: "wellness",
     id: 49,
+    count: 1,
   },
   {
     name: "Multivitamin Gummies",
@@ -427,6 +477,7 @@ const initialState = [
     price: 599,
     category: "wellness",
     id: 50,
+    count: 1,
   },
   {
     name: "Chyawanprash Classic",
@@ -435,6 +486,7 @@ const initialState = [
     price: 329,
     category: "wellness",
     id: 51,
+    count: 1,
   },
   {
     name: "Herbal Sleep Drops",
@@ -443,6 +495,7 @@ const initialState = [
     price: 449,
     category: "wellness",
     id: 52,
+    count: 1,
   },
   {
     name: "Detox Green Tea Blend",
@@ -452,6 +505,7 @@ const initialState = [
     price: 279,
     category: "wellness",
     id: 53,
+    count: 1,
   },
 ];
 

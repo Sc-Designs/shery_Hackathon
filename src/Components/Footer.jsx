@@ -4,8 +4,8 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="relative flex flex-col w-full py-10 mt-10 bg-zinc-950 md:flex-row md:items-start gap-y-5">
-      <div className="flex flex-col items-center md:px-2 lg:px-10 text-center ">
+    <div className="relative flex flex-col w-full py-10 mt-10  bg-zinc-950 md:flex-row md:items-start gap-y-5">
+      <div className="flex flex-col items-center px-5 md:px-2 lg:px-10 text-center ">
         <h1 className="text-4xl uppercase font-Placard md:text-3xl">
           Who we are
         </h1>
@@ -14,7 +14,7 @@ const Footer = () => {
           at the best prices guaranteed with Quality.
         </p>
       </div>
-      <div className="flex flex-col md:px-2 lg:px-10 mt-5 md:mt-0">
+      <div className="flex flex-col px-5 md:px-2 lg:px-10 mt-5 md:mt-0">
         <h1 className="text-2xl uppercase font-Placard md:text-xl md:whitespace-nowrap">
           Categories
         </h1>
@@ -42,7 +42,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col md:px-2 lg:px-10">
+      <div className="flex flex-col px-5 md:px-2 lg:px-10">
         <h1 className="text-2xl uppercase font-Placard md:text-xl md:whitespace-nowrap">
           Orders
         </h1>
@@ -58,7 +58,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col md:px-2 lg:px-10">
+      <div className="flex flex-col px-5 md:px-2 lg:px-10">
         <h1 className="text-2xl uppercase font-Placard md:text-xl md:whitespace-nowrap">
           Important Links
         </h1>
@@ -83,7 +83,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col px-10 my-2 text-lg gap-y-2 font-Satoshi md:mt-0">
+      <div className="flex flex-col px-10 mt-2 mb-6 text-lg gap-y-2 font-Satoshi md:mt-0">
         <h1 className="text-2xl uppercase font-Placard md:text-xl md:whitespace-nowrap">
           Follow us on:
         </h1>
@@ -100,7 +100,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <h1 className="absolute text-center -translate-x-1/2 bottom-2 left-1/2">
+      <h1 className="absolute text-center -translate-x-1/2 bottom-2 whitespace-nowrap left-1/2">
         &copy; CopyRight By SC-Design
       </h1>
     </div>

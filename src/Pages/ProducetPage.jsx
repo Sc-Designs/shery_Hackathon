@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import { useSelector } from "react-redux";
+import SpotlightCard from "../Components/SpotlightCard";
 
 const ProductPage = () => {
   const { type } = useParams();
   const allCards = useSelector((state) => state.preCardInfoReducer);
   const [cards, setCards] = useState([]);
-  const [searchTerm, setSearchTerm] = useState(""); // Step 1: search state
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     let filtered = [];
@@ -36,16 +37,16 @@ const ProductPage = () => {
   );
 
   return (
-    <div className="w-full min-h-screen bg-zinc-900 pt-25 pb-10 text-white font-Satoshi px-10">
+    <div className="w-full min-h-screen bg-black pt-25 pb-10 text-white font-Satoshi px-10">
       <Navbar />
       <h1 className="text-2xl font-bold capitalize mb-4">{type} Products</h1>
-      <input
+      {filteredCards.length > 0 && <input
         type="text"
         placeholder="Search products..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="w-full md:w-1/2 mb-6 p-2 rounded-md outline-none text-white border-1 border-white/20 placeholder:text-white/50"
-      />
+      />}
 
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {filteredCards.length === 0 ? (
@@ -55,13 +56,14 @@ const ProductPage = () => {
         ) : (
           filteredCards.map((item, i) => (
             <Link key={i} to={`/product-dets/${item.id}`}>
-              <div className="mb-2 bg-black/50 rounded-md flex flex-col group justify-between items-center px-2 py-3">
+              <SpotlightCard className="rounded-lg" >
+              <div className="mb-2 bg-zinc-900 shadow-lg shadow-zinc-800 rounded-md flex flex-col group justify-between items-center px-2 py-3">
                 <div className="w-[90%] h-70 md:h-50 overflow-hidden rounded-md">
                   <img
                     src={item.pic}
                     alt=""
                     className="group-hover:scale-115 object-center transition-all duration-150"
-                  />
+                    />
                 </div>
                 <h2 className="text-lg mt-4 text-center">{item.name}</h2>
                 <p className="text-sm text-center text-zinc-400">
@@ -71,6 +73,7 @@ const ProductPage = () => {
                   {`₹${item.price}/-`}
                 </div>
               </div>
+              </SpotlightCard>
             </Link>
           ))
         )}

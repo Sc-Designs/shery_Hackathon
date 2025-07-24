@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../Components/Navbar'
 import { useParams } from 'react-router-dom'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FaStar } from "react-icons/fa";
 import GlareButton from '../Components/GlareButton';
 import ShinyText from '../Components/ShinyText';
 import Footer from '../Components/Footer';
+import { addProduct } from '../Store/Reducers/CartProduct';
+import { toast } from 'react-toastify';
 
 const ProductDets = () => {
   const { id } = useParams();
+  const dispatch = useDispatch();
   const Cards = useSelector(state=> state.preCardInfoReducer)
   const [CardsDets, setCardsDets] = useState({});
  useEffect(() => {
@@ -62,12 +65,22 @@ const ProductDets = () => {
             </p>
             <div className="flex mt-5 gap-x-4">
               <GlareButton>
-                <button className="w-50 py-2 rounded-lg text-lg">
+                <button
+                  onClick={() => {
+                    dispatch(addProduct(CardsDets));
+                    toast.success("🎉 Product Added in Cart.");
+                  }}
+                  className="px-5 lg:px-0 lg:w-50 py-2 rounded-lg text-lg">
                   ₹{CardsDets?.price}/-
                 </button>
               </GlareButton>
               <GlareButton>
-                <button className="w-50 py-2 rounded-lg text-lg">
+                <button
+                  onClick={() => {
+                    dispatch(addProduct(CardsDets));
+                    toast.success("🎉 Product Added in Cart.");
+                  }}
+                  className="px-5 lg:px-0 lg:w-50 py-2 rounded-lg text-lg">
                   Add to Cart
                 </button>
               </GlareButton>
@@ -134,21 +147,24 @@ const ProductDets = () => {
             {customerReview.map((item, i) => (
               <div key={i}>
                 <h1 className="font-semibold text-xl flex items-start gap-x-2">
-                  <span className='flex items-center gap-x-2'><FaStar className='text-white/50' /> {item.rating}</span> {item.name}{" "}
+                  <span className="flex items-center gap-x-2">
+                    <FaStar className="text-white/50" /> {item.rating}
+                  </span>{" "}
+                  {item.name}{" "}
                   {item.verfied && (
                     <span className="text-sm bg-zinc-800 px-2 rounded-sm">
                       Verifed
                     </span>
                   )}
                 </h1>
-                <p className="ml-7">
+                <div className="ml-7">
                   <ShinyText
                     text={item.text}
                     disabled={false}
                     speed={Math.floor(Math.random() * 12 + i)}
                     className="custom-class"
                   />
-                </p>
+                </div>
               </div>
             ))}
           </div>

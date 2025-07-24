@@ -4,31 +4,63 @@ import { IoIosEyeOff } from "react-icons/io";
 import { IoMdEye } from "react-icons/io";
 import GlareButton from '../Components/GlareButton';
 import { useForm } from "react-hook-form"
+import { loginUser, registerUser } from '../Store/Reducers/UserReducer';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 const Login = () => {
-    const [passview, setpassview] = useState(false);
-    const [slide, setslide] = useState(false);
+    const [Loginpassview, setLoginpassview] = useState(false);
+    const [Signpassview, setSignpassview] = useState(false);
+    const [MobileLoginpassview, setMobpassview] = useState(false);
+    const [MobileSignpassview, setMobilepassview] = useState(false);
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
+
+    const [slide, setslide] = useState(true);
+    
     const {
       register: registerSignup,
       handleSubmit: handleSubmitSignup,
-      reset: resetSignup,
       formState: { errors: errorsSignup },
     } = useForm();
     const {
       register: registerLogin,
       handleSubmit: handleSubmitLogin,
-      reset: resetLogin,
       formState: { errors: errorsLogin },
+    } = useForm();
+    const {
+      register: MoblieregisterSignup,
+      handleSubmit: MobilehandleSubmitSignup,
+      formState: { errors: MobileerrorsSignup },
+    } = useForm();
+    const {
+      register: MobileregisterLogin,
+      handleSubmit: MobilehandleSubmitLogin,
+      formState: { errors: MobileerrorsLogin },
     } = useForm();
 
   const Register = (data)=>{
-    console.log(data);
-    resetSignup();
+      const { name, email, password } = data;
+      const user = { name, email, password };
+      localStorage.setItem("authUser", JSON.stringify(user));
+      dispatch(registerUser(user));
+      toast.success("Account created successfully!");
+      setslide(false); 
   }
   const Login = (data)=>{
-    console.log(data);
-    resetLogin();
+    const { email, password } = data;
+    const savedUser = JSON.parse(localStorage.getItem("authUser"));
+  
+    if (savedUser?.email === email && savedUser?.password === password) {
+      dispatch(loginUser(savedUser));
+      localStorage.setItem("loggedIn", "true");
+      toast.success("Login successful!");
+      navigate("/profile");
+    } else {
+      toast.error("Invalid credentials!");
+    }
   }
   
   return (
@@ -111,18 +143,18 @@ const Login = () => {
                       "Password must be at least 8 characters and include uppercase, lowercase, number, and special character",
                   },
                 })}
-                type={passview ? "text" : "password"}
+                type={Signpassview ? "text" : "password"}
                 placeholder="password"
                 className="w-full py-2 border-none outline-none"
               />
-              {passview ? (
+              {Signpassview ? (
                 <IoMdEye
-                  onClick={() => setpassview(false)}
+                  onClick={() => setSignpassview(false)}
                   className="text-xl cursor-pointer"
                 />
               ) : (
                 <IoIosEyeOff
-                  onClick={() => setpassview(true)}
+                  onClick={() => setSignpassview(true)}
                   className="text-xl cursor-pointer"
                 />
               )}
@@ -182,18 +214,18 @@ const Login = () => {
                 {...registerLogin("password", {
                   required: "Password is required",
                 })}
-                type={passview ? "text" : "password"}
+                type={Loginpassview ? "text" : "password"}
                 placeholder="password"
                 className="w-full py-2 border-none outline-none"
               />
-              {passview ? (
+              {Loginpassview ? (
                 <IoMdEye
-                  onClick={() => setpassview(false)}
+                  onClick={() => setLoginpassview(false)}
                   className="text-xl cursor-pointer"
                 />
               ) : (
                 <IoIosEyeOff
-                  onClick={() => setpassview(true)}
+                  onClick={() => setLoginpassview(true)}
                   className="text-xl cursor-pointer"
                 />
               )}
@@ -224,7 +256,7 @@ const Login = () => {
       <div className="fixed flex flex-col px-5 py-10 overflow-hidden -translate-x-1/2 -translate-y-1/2 md:flex-row top-1/2 gap-x-15 gap-y-10 md:hidden left-1/2 backdrop-blur-2xl border-1 rounded-2xl border-white/50">
         <div className={`${slide ? "hidden" : "block"}`}>
           <form
-            onSubmit={handleSubmitLogin(Login)}
+            onSubmit={MobilehandleSubmitLogin(Login)}
             className="flex flex-col items-center text-white font-Satoshi gap-y-2">
             <h1 className="text-2xl font-semibold text-center font-Satoshi">
               Login to get exciting offers!
@@ -234,7 +266,7 @@ const Login = () => {
               Naturals at the best prices guaranteed with Quality
             </p>
             <input
-              {...registerLogin("email", {
+              {...MobileregisterLogin("email", {
                 required: "email is required!",
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
@@ -245,28 +277,28 @@ const Login = () => {
               className="w-full px-3 py-2 mt-3 rounded-full outline-none border-1 border-white/50 invalid:border-pink-500"
               placeholder="email"
             />
-            {errorsLogin.email && (
+            {MobileerrorsLogin.email && (
               <p className="text-[#FF3B30] font-Satoshi">
-                {errorsLogin.email.message}
+                {MobileerrorsLogin.email.message}
               </p>
             )}
             <div className="flex items-center w-full px-3 my-3 rounded-full border-1 border-white/50">
               <input
-                {...registerLogin("password", {
+                {...MobileregisterLogin("password", {
                   required: "Password is required",
                 })}
-                type={passview ? "text" : "password"}
+                type={MobileLoginpassview ? "text" : "password"}
                 placeholder="password"
                 className="w-full py-2 border-none outline-none"
               />
-              {passview ? (
+              {MobileLoginpassview ? (
                 <IoMdEye
-                  onClick={() => setpassview(false)}
+                  onClick={() => setMobpassview(false)}
                   className="text-xl cursor-pointer"
                 />
               ) : (
                 <IoIosEyeOff
-                  onClick={() => setpassview(true)}
+                  onClick={() => setMobpassview(true)}
                   className="text-xl cursor-pointer"
                 />
               )}
@@ -295,7 +327,7 @@ const Login = () => {
         </div>
         <div className={`${slide ? "block" : "hidden"}`}>
           <form
-            onSubmit={handleSubmitSignup(Register)}
+            onSubmit={MobilehandleSubmitSignup(Register)}
             className="flex flex-col items-center text-white font-Satoshi gap-y-2">
             <h1 className="text-2xl font-semibold text-center font-Satoshi">
               Signup to get exciting offers!
@@ -305,7 +337,7 @@ const Login = () => {
               Naturals at the best prices guaranteed with Quality
             </p>
             <input
-              {...registerSignup("name", {
+              {...MoblieregisterSignup("name", {
                 required: "Name is required!",
                 maxLength: {
                   value: 20,
@@ -322,7 +354,7 @@ const Login = () => {
               </p>
             )}
             <input
-              {...registerSignup("email", {
+              {...MoblieregisterSignup("email", {
                 required: "email is required!",
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
@@ -333,14 +365,14 @@ const Login = () => {
               className="w-full px-3 py-2 mt-3 rounded-full outline-none border-1 border-white/50 invalid:border-pink-500"
               placeholder="email"
             />
-            {errorsSignup.email && (
+            {MobileerrorsSignup.email && (
               <p className="text-[#FF3B30] font-Satoshi">
-                {errorsSignup.email.message}
+                {MobileerrorsSignup.email.message}
               </p>
             )}
             <div className="flex items-center w-full px-3 my-3 rounded-full border-1 border-white/50">
               <input
-                {...registerSignup("password", {
+                {...MoblieregisterSignup("password", {
                   required: "Password is required",
                   minLength: {
                     value: 6,
@@ -353,25 +385,25 @@ const Login = () => {
                       "Password must be at least 8 characters and include uppercase, lowercase, number, and special character",
                   },
                 })}
-                type={passview ? "text" : "password"}
+                type={MobileSignpassview ? "text" : "password"}
                 placeholder="password"
                 className="w-full py-2 border-none outline-none"
               />
-              {passview ? (
+              {MobileSignpassview ? (
                 <IoMdEye
-                  onClick={() => setpassview(false)}
+                  onClick={() => setMobilepassview(false)}
                   className="text-xl cursor-pointer"
                 />
               ) : (
                 <IoIosEyeOff
-                  onClick={() => setpassview(true)}
+                  onClick={() => setMobilepassview(true)}
                   className="text-xl cursor-pointer"
                 />
               )}
             </div>
-            {errorsSignup.password && (
+            {MobileerrorsSignup.password && (
               <p className="text-[#FF3B30] font-Satoshi">
-                {errorsSignup.password.message}
+                {MobileerrorsSignup.password.message}
               </p>
             )}
             <GlareButton>

@@ -106,11 +106,17 @@ const Navbar = () => {
                 <MdPersonPin />
               </li>
             </NavLink>
-            <Link>
+            <NavLink
+            to="/cart"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-amber-400 hover:text-amber-400 transition-all duration-150"
+                  : "hover:text-amber-400 transition-all duration-150"
+              }>
               <li>
                 <LiaCartArrowDownSolid />
               </li>
-            </Link>
+            </NavLink>
           </ul>
         </div>
       </div>
@@ -131,7 +137,7 @@ const Navbar = () => {
               <MdPersonPin />
             </li>
           </Link>
-          <Link>
+          <Link to="/cart">
             <li>
               <LiaCartArrowDownSolid />
             </li>
