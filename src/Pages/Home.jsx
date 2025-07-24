@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import VideoReveler from './../Components/VideoReveler';
 import TextRevel from '../Components/TextRevel';
 import CardSection from '../Components/CardSection';
@@ -18,6 +18,12 @@ import { useSelector } from 'react-redux';
 
 const Home = () => {
   const Cards = useSelector((state) => state.preCardInfoReducer);
+  const marqueeCard = [];
+  useEffect(()=>{
+    for (let i = 0; i < 4; i++) {
+      marqueeCard.push(Cards[i]);
+    }
+  },[])
   return (
     <div className="w-full min-h-screen overflow-x-hidden text-white bg-black">
       <section className="relative w-full h-screen">
@@ -54,7 +60,7 @@ const Home = () => {
       <VideoReveler />
       <TextRevel />
       <div className="relative h-96">
-        <FlowingMenu items={Cards} />
+        <FlowingMenu items={marqueeCard} />
       </div>
       <ScrollVelocity
         texts={["Fragrance", "OG Beuty"]}
