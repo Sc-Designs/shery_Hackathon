@@ -52,9 +52,9 @@ const Home = () => {
             </Link>
           </GlareButton>
         </div>
-        <div className="text-white flex flex-col items-center gap-y-2 absolute bottom-2 left-1/2 -translate-x-1/2 md:left-[93%] font-Satoshi">
+        <div className="text-white flex flex-col items-center gap-y-2 absolute bottom-2 left-1/2 -translate-x-1/2 md:bottom-5 md:left-[87%] lg:left-[90%] font-Satoshi">
           <TfiMouse className="text-3xl rotate-180 animate-bounce" />
-          <h1>Scroll Down</h1>
+          <h1 className='whitespace-normal'>Scroll Down</h1>
         </div>
       </section>
       <VideoReveler />

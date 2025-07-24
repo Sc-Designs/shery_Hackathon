@@ -95,11 +95,6 @@ const Navbar = () => {
           </ul>
 
           <ul className="flex items-center text-2xl gap-x-4">
-            <Link>
-              <li>
-                <CiSearch />
-              </li>
-            </Link>
             <NavLink
               className={({ isActive }) =>
                 isActive
@@ -119,7 +114,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <div className="flex fixed z-[99] items-center justify-between text-zinc-200 w-[90%] py-2 px-4 rounded-full bg-zinc-700/50 backdrop-blur-xl border-1 border-zinc-300 top-5 left-1/2 -translate-x-1/2 md:hidden">
+      <div className="flex fixed z-[99] items-center justify-between text-zinc-200 w-[90%] py-2 px-4 rounded-full bg-zinc-700/50 backdrop-blur-xl border-1 border-zinc-300 top-5 left-1/2 -translate-x-1/2 lg:hidden">
         <HiOutlineMenuAlt4
           onClick={() => setMenuShow(true)}
           className="text-2xl"
@@ -144,7 +139,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div
-        className={`sidenav fixed w-[90%] h-screen z-[9999] overflow-auto bg-amber-400 px-4 py-5 text-2xl transition-all duration-150 ${
+        className={`sidenav fixed w-[90%] md:w-[50%] top-0 h-screen z-[9999] overflow-auto bg-amber-400 px-4 py-5 text-2xl transition-all duration-150 ${
           menuShow ? "left-0" : "left-[-100%]"
         }`}>
         <AiFillCloseSquare

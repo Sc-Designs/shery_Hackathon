@@ -27,7 +27,7 @@ const TextReveler = () => {
       {animation && (
         <h1
           ref={textRef}
-          className="onlyBorder text-6xl lg:text-8xl text-center -mt-50 md:-mt-10 leading-20 lg:leading-32 italic px-20">
+          className="onlyBorder text-6xl md:text-8xl md:leading-40 md:-mt-30 md:px-5 lg:text-8xl text-center -mt-50 lg:-mt-10 leading-20 lg:leading-32 italic px-20">
           "Fragrance", "Skin", "Face", "Hair", "Wellness"
         </h1>
       )}

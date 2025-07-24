@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="relative flex flex-col w-full py-10 mt-10 bg-zinc-950 md:flex-row md:items-start gap-y-5">
-      <div className="flex flex-col items-center px-10 text-center ">
+      <div className="flex flex-col items-center md:px-2 lg:px-10 text-center ">
         <h1 className="text-4xl uppercase font-Placard md:text-3xl">
           Who we are
         </h1>
@@ -14,41 +14,41 @@ const Footer = () => {
           at the best prices guaranteed with Quality.
         </p>
       </div>
-      <div className="flex flex-col px-10 mt-5 md:mt-0">
+      <div className="flex flex-col md:px-2 lg:px-10 mt-5 md:mt-0">
         <h1 className="text-2xl uppercase font-Placard md:text-xl md:whitespace-nowrap">
           Categories
         </h1>
-        <ul className="flex flex-col mt-2 ml-5 text-lg gap-y-2 font-Satoshi">
+        <ul className="flex flex-col mt-2 ml-5 text-lg gap-y-2 font-Satoshi whitespace-nowrap">
           <li>
-            <Link>OG Luxury</Link>
+            <Link to="/product/luxury">OG Luxury</Link>
           </li>
           <li>
-            <Link>OG Natural</Link>
+            <Link to="/product/natural">OG Natural</Link>
           </li>
           <li>
-            <Link>OG Science</Link>
+            <Link to="/product/science">OG Science</Link>
           </li>
           <li>
-            <Link>OG Beauty</Link>
+            <Link to="/product/beauty">OG Beauty</Link>
           </li>
           <li>
-            <Link>OG Ayurveda</Link>
+            <Link to="/product/ayurveda">OG Ayurveda</Link>
           </li>
           <li>
-            <Link>OG Wellness</Link>
+            <Link to="/product/wellness">OG Wellness</Link>
           </li>
           <li>
-            <Link>Crazy Deals</Link>
+            <Link to="/product/deals">Crazy Deals</Link>
           </li>
         </ul>
       </div>
-      <div className="flex flex-col px-10">
+      <div className="flex flex-col md:px-2 lg:px-10">
         <h1 className="text-2xl uppercase font-Placard md:text-xl md:whitespace-nowrap">
           Orders
         </h1>
         <ul className="flex flex-col mt-2 ml-5 text-lg gap-y-2 font-Satoshi">
           <li>
-            <Link>Account</Link>
+            <Link to="/profile">Account</Link>
           </li>
           <li>
             <Link>Track Order</Link>
@@ -58,13 +58,13 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col px-10">
+      <div className="flex flex-col md:px-2 lg:px-10">
         <h1 className="text-2xl uppercase font-Placard md:text-xl md:whitespace-nowrap">
           Important Links
         </h1>
         <ul className="flex flex-col mt-2 ml-5 text-lg gap-y-2 font-Satoshi">
           <li>
-            <Link>About Us</Link>
+            <Link to="/about">About Us</Link>
           </li>
           <li>
             <Link>Contact Us</Link>

@@ -7,6 +7,7 @@ const initialState = [
     description: "Rosemary, Basil & Amber | India’s Strongest Perfume",
     price: 599,
     category: "luxury",
+    id: 1,
   },
   {
     name: "Shadow",
@@ -14,6 +15,7 @@ const initialState = [
     description: "Lavender, Sage & Amber | India’s Strongest Perfume",
     price: 599,
     category: "luxury",
+    id: 2,
   },
   {
     name: "Gallant",
@@ -21,6 +23,7 @@ const initialState = [
     description: "Petitgrain, Jasmine & Sandalwood | India’s Strongest Perfume",
     price: 599,
     category: "luxury",
+    id: 3,
   },
   {
     name: "Smokey",
@@ -28,6 +31,7 @@ const initialState = [
     description: "Whiskey, Oud & Cinnamon | India’s Strongest Perfume",
     price: 599,
     category: "luxury",
+    id: 4,
   },
   {
     name: "Glow Elixir",
@@ -35,6 +39,7 @@ const initialState = [
     description: "Turmeric, Aloe Vera & Saffron | Natural Glow Booster",
     price: 499,
     category: "natural",
+    id: 4,
   },
   {
     name: "Pure Dew Face Mist",
@@ -42,6 +47,7 @@ const initialState = [
     description: "Rose Water, Witch Hazel & Cucumber | Instant Hydration",
     price: 349,
     category: "natural",
+    id: 5,
   },
   {
     name: "Neem Detox Gel",
@@ -49,6 +55,7 @@ const initialState = [
     description: "Neem, Tea Tree & Basil | Purifies Acne-Prone Skin",
     price: 399,
     category: "natural",
+    id: 6,
   },
   {
     name: "Cocoa Butter Balm",
@@ -56,6 +63,7 @@ const initialState = [
     description: "Cocoa Butter, Shea & Vitamin E | Deep Nourishment",
     price: 299,
     category: "natural",
+    id: 7,
   },
   {
     name: "Sun Kissed SPF 50",
@@ -63,6 +71,7 @@ const initialState = [
     description: "Zinc Oxide, Carrot Seed & Aloe | Mineral Sun Protection",
     price: 549,
     category: "natural",
+    id: 8,
   },
   {
     name: "Green Tea Serum",
@@ -70,6 +79,7 @@ const initialState = [
     description: "Green Tea, Licorice & Hyaluronic Acid | Soothes & Hydrates",
     price: 449,
     category: "natural",
+    id: 9,
   },
   {
     name: "Honey Oat Scrub",
@@ -77,6 +87,7 @@ const initialState = [
     description: "Raw Honey, Oats & Almond Oil | Gentle Exfoliation",
     price: 379,
     category: "natural",
+    id: 10,
   },
   {
     name: "Charcoal Clay Mask",
@@ -84,6 +95,7 @@ const initialState = [
     description: "Activated Charcoal, Bentonite & Aloe | Deep Pore Cleanse",
     price: 429,
     category: "natural",
+    id: 11,
   },
   {
     name: "Lavender Sleep Cream",
@@ -91,6 +103,7 @@ const initialState = [
     description: "Lavender, Chamomile & Coconut Milk | Calm & Repair Overnight",
     price: 499,
     category: "natural",
+    id: 12,
   },
   {
     name: "Papaya Brightening Gel",
@@ -98,6 +111,7 @@ const initialState = [
     description: "Papaya, Lemon & Aloe Vera | Fades Tan & Dark Spots",
     price: 389,
     category: "natural",
+    id: 13,
   },
   {
     name: "Peptide Repair Serum",
@@ -106,6 +120,7 @@ const initialState = [
       "Matrixyl 3000, Niacinamide & Hyaluronic Acid | Firms & Restores",
     price: 799,
     category: "science",
+    id: 14,
   },
   {
     name: "Retinol Night Cream",
@@ -114,6 +129,7 @@ const initialState = [
       "0.3% Retinol, Ceramides & Squalane | Reduces Wrinkles & Fine Lines",
     price: 899,
     category: "science",
+    id: 15,
   },
   {
     name: "AHA Glow Toner",
@@ -122,6 +138,7 @@ const initialState = [
       "5% Glycolic Acid, Lactic Acid & Green Tea | Smoothes & Exfoliates",
     price: 599,
     category: "science",
+    id: 16,
   },
   {
     name: "Vitamin C Shield",
@@ -130,6 +147,7 @@ const initialState = [
       "15% L-Ascorbic Acid, Ferulic Acid & Vitamin E | Brightens & Protects",
     price: 849,
     category: "science",
+    id: 17,
   },
   {
     name: "Hyaluronic Hydration Boost",
@@ -138,6 +156,7 @@ const initialState = [
       "Multi-molecular HA, Panthenol & Glycerin | Deep Skin Hydration",
     price: 499,
     category: "science",
+    id: 18,
   },
   {
     name: "Salicylic Blemish Fix",
@@ -146,6 +165,7 @@ const initialState = [
       "2% Salicylic Acid, Zinc & Witch Hazel | Clears Acne & Blackheads",
     price: 549,
     category: "science",
+    id: 19,
   },
   {
     name: "Barrier Restore Moisturizer",
@@ -154,6 +174,7 @@ const initialState = [
       "Ceramide Complex, Niacinamide & Fatty Acids | Strengthens Skin",
     price: 629,
     category: "science",
+    id: 20,
   },
   {
     name: "Azelaic Clarity Cream",
@@ -162,6 +183,7 @@ const initialState = [
       "10% Azelaic Acid, Allantoin & Vitamin B5 | Fades Redness & Spots",
     price: 699,
     category: "science",
+    id: 21,
   },
   {
     name: "Cica Repair Gel",
@@ -170,6 +192,7 @@ const initialState = [
       "Centella Asiatica, Madecassoside & Beta Glucan | Soothes Sensitive Skin",
     price: 499,
     category: "science",
+    id: 22,
   },
   {
     name: "SPF 60 UV Defense Fluid",
@@ -178,6 +201,7 @@ const initialState = [
       "Broad Spectrum SPF 60, Niacinamide & Antioxidants | Lightweight & Non-Greasy",
     price: 749,
     category: "science",
+    id: 23,
   },
   {
     name: "Radiance Boost Cream",
@@ -185,6 +209,7 @@ const initialState = [
     description: "Pearl Extract, Vitamin C & Arbutin | Instant Glow Enhancer",
     price: 649,
     category: "beauty",
+    id: 24,
   },
   {
     name: "Glass Skin Serum",
@@ -193,6 +218,7 @@ const initialState = [
       "Niacinamide, Snow Mushroom & Licorice Root | Dewy Skin Finish",
     price: 799,
     category: "beauty",
+    id: 25,
   },
   {
     name: "24K Gold Face Gel",
@@ -200,6 +226,7 @@ const initialState = [
     description: "24K Gold, Collagen & Rosehip Oil | Lifts & Illuminates",
     price: 999,
     category: "beauty",
+    id: 26,
   },
   {
     name: "Blush Berry Lip Balm",
@@ -207,6 +234,7 @@ const initialState = [
     description: "Beetroot, Shea Butter & Vitamin E | Natural Tinted Lips",
     price: 299,
     category: "beauty",
+    id: 27,
   },
   {
     name: "Rosy Cheek Mask",
@@ -214,6 +242,7 @@ const initialState = [
     description: "French Rose Clay, Aloe & Avocado Oil | Brightens & Firms",
     price: 499,
     category: "beauty",
+    id: 28,
   },
   {
     name: "Glow Getter Sheet Mask",
@@ -221,6 +250,7 @@ const initialState = [
     description: "Hyaluronic Acid, Ginseng & Gold Flakes | 15-Minute Glow Shot",
     price: 199,
     category: "beauty",
+    id: 29,
   },
   {
     name: "Silk Touch Primer",
@@ -229,6 +259,7 @@ const initialState = [
       "Dimethicone, Vitamin E & Glycerin | Blurs Pores & Softens Skin",
     price: 579,
     category: "beauty",
+    id: 30,
   },
   {
     name: "Under Eye Bright Cream",
@@ -237,6 +268,7 @@ const initialState = [
       "Caffeine, Niacinamide & Hyaluronic Acid | Reduces Puffiness & Dark Circles",
     price: 429,
     category: "beauty",
+    id: 31,
   },
   {
     name: "Glow Milk Cleanser",
@@ -244,6 +276,7 @@ const initialState = [
     description: "Coconut Milk, Almond Oil & Honey | Softens & Brightens Skin",
     price: 389,
     category: "beauty",
+    id: 32,
   },
   {
     name: "Peach Polish Scrub",
@@ -252,6 +285,7 @@ const initialState = [
       "Peach Extract, Walnut Powder & Jojoba Oil | Smooth Radiant Skin",
     price: 399,
     category: "beauty",
+    id: 33,
   },
   {
     name: "Kumkumadi Tailam",
@@ -260,6 +294,7 @@ const initialState = [
       "Saffron, Sandalwood & Manjistha | Traditional Ayurvedic Glow Oil",
     price: 799,
     category: "ayurveda",
+    id: 34,
   },
   {
     name: "Neem Tulsi Face Wash",
@@ -267,6 +302,7 @@ const initialState = [
     description: "Neem, Tulsi & Aloe Vera | Balances Oil & Clears Acne",
     price: 349,
     category: "ayurveda",
+    id: 35,
   },
   {
     name: "Chandan Ubtan",
@@ -275,6 +311,7 @@ const initialState = [
       "Sandalwood, Multani Mitti & Rose | Ayurvedic Brightening Pack",
     price: 399,
     category: "ayurveda",
+    id: 36,
   },
   {
     name: "Ayur Glow Cream",
@@ -282,6 +319,7 @@ const initialState = [
     description: "Licorice, Turmeric & Almond Oil | Brightens and Softens",
     price: 479,
     category: "ayurveda",
+    id: 37,
   },
   {
     name: "Ashwagandha Night Balm",
@@ -289,6 +327,7 @@ const initialState = [
     description: "Ashwagandha, Bala & Sesame Oil | Stress Relief & Skin Repair",
     price: 549,
     category: "ayurveda",
+    id: 38,
   },
   {
     name: "Methi Under Eye Serum",
@@ -297,6 +336,7 @@ const initialState = [
       "Fenugreek, Almond & Cucumber | Reduces Dark Circles Naturally",
     price: 299,
     category: "ayurveda",
+    id: 39,
   },
   {
     name: "Bhringraj Face Mist",
@@ -304,6 +344,7 @@ const initialState = [
     description: "Bhringraj, Vetiver & Tulsi | Refreshing & Balancing Tonic",
     price: 319,
     category: "ayurveda",
+    id: 40,
   },
   {
     name: "Haldi Chandan Sunscreen SPF 30",
@@ -311,6 +352,7 @@ const initialState = [
     description: "Turmeric, Sandalwood & Coconut | Natural Sun Protection",
     price: 459,
     category: "ayurveda",
+    id: 41,
   },
   {
     name: "Triphala Skin Detox Mask",
@@ -318,6 +360,7 @@ const initialState = [
     description: "Triphala, Clay & Basil | Clears Pores & Enhances Clarity",
     price: 429,
     category: "ayurveda",
+    id: 42,
   },
   {
     name: "Desi Rose Toner",
@@ -325,6 +368,90 @@ const initialState = [
     description: "Steam Distilled Rose Water & Vetiver | Tones & Cools Skin",
     price: 259,
     category: "ayurveda",
+    id: 43,
+  },
+  {
+    name: "Ashwagandha Capsules",
+    pic: "https://imgs.search.brave.com/JY7ZZ9LsZ52yo4ECuqBhykEy2__wRY-hGR0wcYWsOjA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cGxhbnR0aGVyYXB5/LmNvbS9jZG4vc2hv/cC9maWxlcy9Bc2h3/YWdhbmRoYV9IZXJi/YWxfU3VwcGxlbWVu/dC0xMjBjdC0wMy5q/cGc_dj0xNzQwNzY1/MjE5JndpZHRoPTE0/NDU",
+    description: "Ashwagandha Extract 500mg | Reduces Stress & Boosts Energy",
+    price: 499,
+    category: "wellness",
+    id: 44,
+  },
+  {
+    name: "Giloy Tulsi Juice",
+    pic: "https://imgs.search.brave.com/4rNONHUNhoFzHK579lYgnzfiMRLHJsy5h9pJpfXnNCA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9heGlv/bWF5dXJ2ZWRhLmNv/bS9jZG4vc2hvcC9w/cm9kdWN0cy8zX2Ey/Yjk0MWJiLTUwYTQt/NDhiNy04MGM5LTYw/YzNjNzRkYjBiZS5q/cGc_dj0xNjYzMjM0/ODY0JndpZHRoPTE0/NDU",
+    description: "Giloy, Tulsi & Amla | Builds Immunity & Detoxifies",
+    price: 349,
+    category: "wellness",
+    id: 45,
+  },
+  {
+    name: "Triphala Tablets",
+    pic: "https://imgs.search.brave.com/gA77D1IU1-Q1RLLZD24QdXqXmmHw0edJZn9QRA-KvxU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pc2hh/bGlmZS5zYWRoZ3Vy/dS5vcmcvbWVkaWEv/Y2F0YWxvZy9wcm9k/dWN0L2Evci9hcnRi/b2FyZF8xX2NvcHlf/Mi5qcGc_b3B0aW1p/emU9bWVkaXVtJmZp/dD1ib3VuZHMmaGVp/Z2h0PSZ3aWR0aD0",
+    description: "Triphala Blend | Supports Digestion & Natural Cleansing",
+    price: 299,
+    category: "wellness",
+    id: 46,
+  },
+  {
+    name: "Apple Cider Vinegar",
+    pic: "https://imgs.search.brave.com/ZI-mCNzV0jnkOK1M9XM7OpKRevGqnFH88k7fKFgqFJA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFuWXlMZU5CVEwu/anBn",
+    description:
+      "Raw & Unfiltered with Mother | Aids Weight Management & Gut Health",
+    price: 399,
+    category: "wellness",
+    id: 47,
+  },
+  {
+    name: "Immuno+ Kadha Mix",
+    pic: "https://imgs.search.brave.com/TuMJLlhmJ3g-tHqVUllHc1w4u1k7FCNnCeMKyzlsAJU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kNHBt/bGd6ZW5rd2VxLmNs/b3VkZnJvbnQubmV0/L2RiYWgyeGhzdGJ3/Z29zN2trdXdubHdm/dGF0ZGo",
+    description:
+      "Dry Herbs – Mulethi, Clove, Ginger & Pepper | Natural Immunity Booster",
+    price: 259,
+    category: "wellness",
+    id: 48,
+  },
+  {
+    name: "Shilajit Resin Pure",
+    pic: "https://imgs.search.brave.com/16E8ky8zyo3Cr58GypYxzPNeeKE84CP9mZuyUTI2qM0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFwRlVjM3hmN0wu/anBn",
+    description: "Himalayan Shilajit | Boosts Stamina & Testosterone Naturally",
+    price: 799,
+    category: "wellness",
+    id: 49,
+  },
+  {
+    name: "Multivitamin Gummies",
+    pic: "https://imgs.search.brave.com/GyEKc7rb9W4jfNMohNWiSXEedvMy_sB3IsvqjgrrBVw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dG9uaWNoZWFsdGgu/Y28vY2RuL3Nob3Av/ZmlsZXMvUHJvZHVj/dFRpbGVzX0d1bW1p/ZXNfQWR1bHRzX1dp/bGRiZXJyeTAyXzhk/OGY1NWE0LTA2ZmYt/NGQxYy04NjQzLTlh/MGY0N2JmMDI3MS5q/cGc_dj0xNzEwMzIz/MjE5JndpZHRoPTE0/NDU",
+    description: "Vitamin A to Zinc + Biotin | Daily Wellness Support",
+    price: 599,
+    category: "wellness",
+    id: 50,
+  },
+  {
+    name: "Chyawanprash Classic",
+    pic: "https://imgs.search.brave.com/sVEk_uwUvSfFYW5_8i2g4syUfLw8haFGnw7ZkbdRAyo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGlzdGFjYXJ0LmNv/bS9jZG4vc2hvcC9m/aWxlcy9kb3dubG9h/ZF8tXzIwMjQtMDkt/MDRUMTE0MjIxLjgz/NF8zMjB4LmpwZz92/PTE3Mzc2MDc2MDU",
+    description: "Amla, Honey, Herbs | Ancient Recipe for Daily Immunity",
+    price: 329,
+    category: "wellness",
+    id: 51,
+  },
+  {
+    name: "Herbal Sleep Drops",
+    pic: "https://imgs.search.brave.com/Aler7f0RUPcgOJ3wAGrzC0nZg_ZB-2yU7PSK0ZdMAvU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFGZzVqRnluVUwu/anBn",
+    description: "Valerian, Chamomile & Melatonin | Relaxation & Deep Sleep",
+    price: 449,
+    category: "wellness",
+    id: 52,
+  },
+  {
+    name: "Detox Green Tea Blend",
+    pic: "https://imgs.search.brave.com/gtxJwqR5uB3HI8kgZ7Kmk07Lxy0uuF4s9fq3hyEP4Ms/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibGVu/ZGF5cGFja3MuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIw/LzA1L2dyZWVuZGV0/b3hzbW9vdGhpZS5q/cGc",
+    description:
+      "Green Tea, Dandelion, Ginger & Lemon | Refreshing Detox Support",
+    price: 279,
+    category: "wellness",
+    id: 53,
   },
 ];
 
