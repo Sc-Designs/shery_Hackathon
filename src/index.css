@@ -24,5 +24,8 @@
 }
 ::-webkit-scrollbar{
     display: none;
-    /* background: #fb7575; */
+}
+::selection{
+    background-color: white;
+    color: #000;
 }

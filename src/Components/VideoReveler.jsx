@@ -46,12 +46,15 @@ const VideoReveler = () => {
       className="relative flex w-full h-screen text-white overflow-hidden">
       <img
         src="/collection.jpg"
-        className={`absolute w-full h-full object-cover transition-opacity duration-200 ${PlayPause ? "opacity-0" : "opacity-100"}`}
+        className={`absolute w-full h-full object-cover transition-opacity duration-200 ${
+          PlayPause ? "opacity-0" : "opacity-100"
+        }`}
         alt=""
       />
       <video
         ref={videoRef}
-        src="/Og_Add.mp4"
+        src="https://res.cloudinary.com/djvcxoyno/video/upload/v1753333641/Add_Og_-_Made_with_Clipchamp_yyk4if.mp4"
+        onContextMenu={(e) => e.preventDefault()}
         onClick={() => {
           if (videoRef.current) {
             videoRef.current.pause();
@@ -70,7 +73,7 @@ const VideoReveler = () => {
                 setPlayPause(true);
               }
             }}
-            />
+          />
         </div>
       )}
       <div className="leftSide w-1/2 h-full flex items-center justify-end z-20 pr-[0.5px] absolute bg-black left-0 top-0">
