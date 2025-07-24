@@ -24,7 +24,7 @@ const Profile = () => {
   const logout = () => {
     localStorage.removeItem("loggedIn");
     dispatch(removeUser());
-    navigate("/login");
+    navigate("/");
   };
   return (
     <div className="w-full min-h-screen bg-zinc-900 text-white">
