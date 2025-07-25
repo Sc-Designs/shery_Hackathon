@@ -26,7 +26,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="w-full min-h-screen bg-black text-white">
+      <div className="w-full relative min-h-screen bg-black text-white">
         <Navbar />
         <div className="pt-25 px-5 lg:px-20 grid grid-cols-1 lg:grid-cols-3 gap-4 font-Satoshi">
           {Cards.map((item, i) => (

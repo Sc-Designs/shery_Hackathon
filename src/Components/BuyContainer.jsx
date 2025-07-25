@@ -7,7 +7,7 @@ import { productAdd } from '../Store/Reducers/OrderList';
 const BuyContainer = ({items,fn}) => {
     const dispatch = useDispatch()
   return (
-    <div className="fixed w-full h-screen bg-black/40 top-0 left-0 z-[99999] backdrop-blur-xl">
+    <div className="absolute w-full h-full bg-black/40 top-0 left-0 z-[99999] backdrop-blur-xl">
       <div className="bg-white relative px-3 pt-5 pb-2 w-[90%] rounded-sm top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <IoMdCloseCircle
           onClick={() => fn(false)}
