@@ -12,9 +12,11 @@ import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { IoCallOutline } from "react-icons/io5";
 import { CiFacebook } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
     const [menuShow, setMenuShow] = useState(false);
+    const CartItemNmber = useSelector((state) => state.cartReducer);
     const navigate = useNavigate();
   return (
     <>
@@ -107,12 +109,18 @@ const Navbar = () => {
               </li>
             </NavLink>
             <NavLink
-            to="/cart"
+              to="/cart"
               className={({ isActive }) =>
                 isActive
-                  ? "text-amber-400 hover:text-amber-400 transition-all duration-150"
-                  : "hover:text-amber-400 transition-all duration-150"
+                  ? "text-amber-400 hover:text-amber-400 transition-all duration-150 relative"
+                  : "hover:text-amber-400 transition-all duration-150 relative"
               }>
+              <small
+                className={`absolute -top-1 -right-2 pointer-events-none text-white ${
+                  CartItemNmber.length > 0 ? "block" : "hidden"
+                } text-xs bg-red-500 rounded-full leading-4 px-1`}>
+                {CartItemNmber.length}
+              </small>
               <li>
                 <LiaCartArrowDownSolid />
               </li>
@@ -137,7 +145,13 @@ const Navbar = () => {
               <MdPersonPin />
             </li>
           </Link>
-          <Link to="/cart">
+          <Link to="/cart" className="relative">
+            <small
+              className={`absolute -top-1 -right-2 pointer-events-none text-white ${
+                CartItemNmber.length > 0 ? "block" : "hidden"
+              } text-xs bg-red-500 rounded-full leading-4 px-1`}>
+              {CartItemNmber.length}
+            </small>
             <li>
               <LiaCartArrowDownSolid />
             </li>
