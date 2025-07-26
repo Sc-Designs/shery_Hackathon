@@ -8,7 +8,7 @@ const BuyContainer = ({items,fn}) => {
     const dispatch = useDispatch()
   return (
     <div className="absolute w-full h-full bg-black/40 top-0 left-0 z-[99999] backdrop-blur-xl">
-      <div className="bg-white relative px-3 pt-5 pb-2 w-[90%] rounded-sm top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="bg-white relative px-3 pt-5 pb-2 w-fit rounded-sm top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <IoMdCloseCircle
           onClick={() => fn(false)}
           className="absolute top-2 right-5 text-black text-2xl"
@@ -42,16 +42,22 @@ const BuyContainer = ({items,fn}) => {
             </div>
           ))}
         </div>
-        <button
-          onClick={() => {
-            toast.success("🎉 Order Place Succesfully.")
-            fn(false)
-            dispatch(productAdd(items))
-            dispatch(removerAllItem());
-          }}
-          className="mx-auto cursor-pointer bg-black px-4 py-1 rounded-lg mt-5 font-Satoshi ">
-          Confirm
-        </button>
+        <div className="flex justify-between w-full mt-5">
+          <h1 className="text-black font-Satoshi">
+            Total Amount :{" "}₹{" "}
+            {items.reduce((acc, item) => acc + item.price * item.count, 0)}/-
+          </h1>
+          <button
+            onClick={() => {
+              toast.success("🎉 Order Place Succesfully.");
+              fn(false);
+              dispatch(productAdd(items));
+              dispatch(removerAllItem());
+            }}
+            className="cursor-pointer bg-black px-4 py-1 rounded-lg font-Satoshi ">
+            Confirm
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -109,7 +109,7 @@ const Profile = () => {
       </div>
       <div className="w-full py-4 px-5 font-Satoshi md:px-10">
         <h1 className="text-7xl font-Blac font-semibold">Your Order</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:grid-cols-4 gap-2 mt-10 mb-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:grid-cols-3 gap-2 mt-10 mb-5">
           {OrderArray.length === 0 ? (
             <ShinyText
               text="No Orders Avalaible"
@@ -120,22 +120,25 @@ const Profile = () => {
           ) : (
             OrderArray.map((items, i) => (
               <Link key={i} to={`/product-dets/${items.id}`}>
-                <div className="px-3 py-3 w-full flex items-center gap-x-5 bg-zinc-950 rounded-2xl">
-                  <div className="w-15 h-15 rounded-md overflow-hidden">
-                    <img
-                      className="w-full h-full object-cover"
-                      src={items.pic}
-                      alt=""
-                    />
+                <div className="px-3 py-3 w-full flex items-center justify-between bg-zinc-950 rounded-2xl">
+                  <div className='flex gap-x-5'>
+                    <div className="w-15 h-15 rounded-md overflow-hidden">
+                      <img
+                        className="w-full h-full object-cover"
+                        src={items.pic}
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                      <h1>{items.name}</h1>
+                      <p>
+                        {items.description.length > 10
+                          ? items.description.slice(0, 24) + "***"
+                          : items.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h1>{items.name}</h1>
-                    <p>
-                      {items.description.length > 10
-                        ? items.description.slice(0, 20) + "***"
-                        : items.description}
-                    </p>
-                  </div>
+                  <h1 className='mr-5'>Qn. : {items.count}</h1>
                 </div>
               </Link>
             ))
